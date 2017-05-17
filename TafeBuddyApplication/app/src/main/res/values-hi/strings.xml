@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+    <string name="app_name">टैफे Buddy</string>
+    <string name="title_campus_list">परिसरों</string>
+    <string name="title_campus_detail">कैम्पस विस्तार</string>
+    <string name="title_activity_webview">वेबदृश्य गतिविधि</string>
+
+    <string name="navigation_drawer_open">ओपन नेविगेशन दराज</string>
+    <string name="navigation_drawer_close">बंद नेविगेशन दराज</string>
+    <string name="title_activity_settings">सेटिंग्स</string>
+    <string name="nav_menu_description">Navigatge तुम कहाँ जाना चाहते हैं</string>
+    <!-- Strings related to Main Page buttons -->
+    <string name="btn_timetable"> समय सारणी</string>
+    <string name= "btn_my_account"> मेरा खाता</string>
+    <string name="btn_faq"> सामान्य प्रश्न</string>
+    <string name= "btn_campus_map"> कैम्पस का नक्शा</string>
+    <string name="btn_book_counselling"> परामर्श सत्र</string>
+    <string name="btn_email"> ईमेल</string>
+
+
+    <!-- Strings related to Navigation menu  buttons -->
+
+    <string name="btn_course_information">पाठ्यक्रम संबंधी जानकारी</string>
+    <string name="btn_videos"> वीडियो</string>
+    <string name="btn_one_note"> एक नोट</string>
+    <string name="btn_one_drive"> एक अभियान</string>
+    <string name="btn_tasks"> कार्य </string>
+    <string name="btn_files"> मेरी फ़ाइलें</string>
+    <string name="btn_settings"> सेटिंग्स </string>
+    <string name="lbl_tools"> उपकरण </string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_user_settings">उपयोगकर्ता सेटिंग</string>
+
+    <string name="pref_title_social_recommendations">सामाजिक सिफारिशों सक्षम करें</string>
+    <string name="pref_description_social_recommendations">लोगों के लिए सिफारिशें अपने संदेश इतिहास के आधार पर संपर्क करने के लिए
+    </string>
+
+    <string name="set_notifications_summary"> यह सेटिंग नियंत्रण मौसम या नहीं आप Tafe से सूचनाएं प्राप्त होगा.</string>
+
+    <string name="pref_title_display_name">अपना नाम यहाँ दर्ज करें</string>
+    <string name="pref_default_display_name">उपयोगकर्ता Tim</string>
+
+    <string name="pref_title_add_friends_to_messages">संदेशों में मित्रों को जोड़ें</string>
+    <string-array name="pref_example_list_titles">
+        <item>हमेशा</item>
+        <item>जब संभव</item>
+        <item>कभी नहीँ</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">डेटा सेट&amp; सिंक</string>
+
+    <string name="pref_title_sync_frequency">सिंक आवृत्ति</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 मिनटों</item>
+        <item>30 मिनटों</item>
+        <item>1 समय</item>
+        <item>3 घंटे</item>
+        <item>6 घंटे</item>
+        <item>कभी नहीँ</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">प्रणाली समन्वयन सेटिंग</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">सूचनाएं</string>
+
+    <string name="pref_title_new_message_notifications">Tafe से सूचनाएं प्राप्त</string>
+
+    <string name="pref_title_ringtone">रिंगटोन सेट करें</string>
+    <string name="set_notification_ringtone">सूचनाओं के लिए अपने रिंगटोन सेट.</string>
+    <string name="pref_ringtone_silent">मूक</string>
+
+    <string name="pref_title_vibrate">कांपना</string>
+    <string name="user_settings">उपयोगकर्ता सेटिंग</string>
+    <string name="pref_map_settings">मानचित्र सेटिंग</string>
+    <string name="pref_notification_settings">अधिसूचना सेटिंग</string>
+
+    <string name="pref_rss_feed">आरएसएस फ़ीड सेटिंग</string>
+    <string name="rss_feed_settings">नियंत्रण आरएसएस फ़ीड प्रदर्शन</string>
+    <string name="rss_feed_summary">यदि आरएसएस फ़ीड यहाँ मुख्य पेज पर प्रदर्शित किया जाता है आप नियंत्रित कर सकते हैं.</string>
+    <string name="data_summary">सेट करें कि अक्सर Tafe Buddy डेटा का उपयोग करता है।</string>
+    <string name="pref_title_data_sync">सेट डेटा और सिंक विकल्प></string>
+
+
+</resources>

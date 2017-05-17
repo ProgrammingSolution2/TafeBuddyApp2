@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+        <string name="app_name">TAFE好友</string>
+        <string name="title_campus_list">校园</string>
+        <string name="title_campus_detail">校园详细</string>
+        <string name="title_activity_webview">活动网页视图</string>
+
+        <string name="navigation_drawer_open">打开抽屉式导航栏</string>
+        <string name="navigation_drawer_close">关闭导览</string>
+        <string name="title_activity_settings">设置</string>
+
+        <!-- Strings related to Main Page buttons -->
+        <string name="btn_timetable"> 时间表</string>
+        <string name= "btn_my_account"> 我的帐户</string>
+        <string name="btn_faq"> 常问问题</string>
+        <string name= "btn_campus_map"> 校园地图</string>
+        <string name="btn_book_counselling">会话辅导</string>
+        <string name="btn_email"> 电子邮件</string>
+         <string name="nav_menu_description">导航到你想去的地方</string>
+
+        <!-- Strings related to Navigation menu  buttons -->
+
+        <string name="btn_course_information"> 课程信息</string>
+        <string name="btn_videos"> 影片</string>
+        <string name="btn_one_note"> 一注</string>
+        <string name="btn_one_drive">一个驱动器 </string>
+        <string name="btn_tasks"> 任务 </string>
+        <string name="btn_files">我的文件</string>
+        <string name="btn_settings"> 设置 </string>
+        <string name="lbl_tools"> 工具 </string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_user_settings">用户设置</string>
+
+    <string name="pref_title_social_recommendations">启用社交推荐</string>
+    <string name="pref_description_social_recommendations">根据您的留言纪录建议联络人
+    </string>
+
+    <string name="set_notifications_summary">此设置控制是否会收到来自Tafe的通知.</string>
+
+    <string name="pref_title_display_name">在这里输入您的姓名</string>
+    <string name="pref_default_display_name">用户 Tim</string>
+
+    <string name="pref_title_add_friends_to_messages">将朋友添加到邮件</string>
+    <string-array name="pref_example_list_titles">
+        <item>总是</item>
+        <item>如果可能</item>
+        <item>决不</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">设置数据 &amp; 同步</string>
+
+    <string name="pref_title_sync_frequency">同步频率</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 分钟</item>
+        <item>30 分钟</item>
+        <item>1 小时</item>
+        <item>3 小时</item>
+        <item>6 小时</item>
+        <item>决不</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>条目 1</item>
+        <item>条目 2</item>
+        <item>条目 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">系统同步设置</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">通知</string>
+
+    <string name="pref_title_new_message_notifications">从Tafe接收通知</string>
+
+    <string name="pref_title_ringtone">设定铃声</string>
+    <string name="set_notification_ringtone">设置您的通知铃声.</string>
+    <string name="pref_ringtone_silent">无声</string>
+
+    <string name="pref_title_vibrate">颤动</string>
+    <string name="user_settings">用户设置</string>
+    <string name="pref_map_settings">地图设置</string>
+    <string name="pref_notification_settings">通知设置</string>
+
+    <string name="pref_rss_feed">RSS提要设置</string>
+    <string name="rss_feed_settings">控制RSS源显示</string>
+    <string name="rss_feed_summary">您可以控制是否在主页面上显示RSS提要.</string>
+    <string name="data_summary">设置Tafe Buddy使用数据的频率.</string>
+    <string name="pref_title_data_sync">设置数据和同步选项
+></string>
+
+</resources>

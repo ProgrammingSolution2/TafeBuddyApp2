@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:layout="http://schemas.android.com/tools"
+    android:id="@+id/first_run_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/first_run_header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/tafelogored"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/TAFELogo"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:id="@+id/first_run_title"
+        android:layout_below="@+id/first_run_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-thin"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:text="TAFE Buddy will need a few permissions to work"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/first_run_title"
+        android:layout_marginTop="20dp">
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:padding="10dp"
+            android:id="@+id/locationRow"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/locationTitle"
+                app:layout_widthPercent="70%"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/primary_text_light"
+                android:text="Location Permission"/>
+
+            <TextView android:id="@+id/locationDescription"
+                android:layout_below="@+id/locationTitle"
+                app:layout_widthPercent="70%"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@android:color/secondary_text_light"
+                android:text="Required to access TAFESA Campus Maps" />
+
+            <CheckBox android:id="@+id/locationCheckBox"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="6sp"
+                android:checked="true"
+                android:focusable="false"/>
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/acceptPermissionsButton"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:text="Accept Permissions"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/first_run_buttonshape"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

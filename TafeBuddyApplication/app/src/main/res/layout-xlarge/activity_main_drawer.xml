@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <group android:checkableBehavior="single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_account_box"
+            android:title="@string/btn_course_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></item>
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/btn_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_onenote"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/btn_one_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_onedrive"
+            android:icon="@drawable/ic_cast_dark"
+            android:title="@string/btn_one_drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_alarm_add"
+            android:title="@string/btn_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_moodle"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/btn_moodle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </group>
+
+    <item android:title="@string/lbl_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <menu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_account_box"
+            android:title="@string/btn_course_information"></item>
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/btn_videos" />
+        <item
+            android:id="@+id/nav_onenote"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/btn_one_note" />
+        <item
+            android:id="@+id/nav_onedrive"
+            android:icon="@drawable/ic_cast_dark"
+            android:title="@string/btn_one_drive" />
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_alarm_add"
+            android:title="@string/btn_tasks" />
+        <item
+            android:id="@+id/nav_moodle"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/btn_moodle" />
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_scan"
+            android:title="@string/btn_scan" />
+
+    </group>
+
+    <item android:title="@string/lbl_tools">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/btn_settings" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Buttons -->
+    <string name="Agenda">Agenda</string>
+    <string name="AgendaDesc">Agenda Button</string>
+
+    <string name="MyAccount">My Account</string>
+    <string name="MyAccountDesc">My Account Button</string>
+
+    <string name="FAQ">FAQ</string>
+    <string name="FAQDesc">FAQ Button</string>
+
+    <string name="Campuses">Campuses</string>
+    <string name="CampusesDesc">Campuses Maps Button</string>
+
+    <string name="CounsellingSession">Course Counselling</string>
+    <string name="CounsellingSessionDesc">Course Counselling Button</string>
+
+    <string name="Email">Email</string>
+    <string name="EmailDesc">Email Button</string>
+
+</resources>

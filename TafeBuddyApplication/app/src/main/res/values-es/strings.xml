@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <resources>
+        <string name="app_name"> Tafe de Amigos </string>
+        <string name="title_campus_list"> Campus </string>
+        <string name="title_campus_detail">Detalle del campus </string>
+        <string name="title_activity_webview">Actividad vista web </string>
+
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+        <string name="title_activity_settings">Settings</string>
+        <string name="nav_menu_description">Navegue hasta donde le gustaría ir</string>
+
+        <!-- Strings related to Main Page buttons -->
+        <string name="btn_timetable"> Calendario</string>
+        <string name= "btn_my_account"> Mi cuenta</string>
+        <string name="btn_faq"> Preguntas más frecuentes </string>
+        <string name= "btn_campus_map"> Mapa del campus</string>
+        <string name="btn_book_counselling"> Las sesiones de asesoramiento</string>
+        <string name="btn_email"> Email</string>
+
+
+        <!-- Strings related to Navigation menu  buttons -->
+
+        <string name="btn_course_information"> Información del curso</string>
+        <string name="btn_videos"> vídeos</string>
+        <string name="btn_one_note"> Una nota</string>
+        <string name="btn_one_drive"> Un paseo </string>
+        <string name="btn_tasks"> Tareas </string>
+        <string name="btn_files"> Mis archivos </string>
+        <string name="btn_settings"> ajustes </string>
+        <string name="lbl_tools"> Herramientas </string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_user_settings">Ajustes de usuario</string>
+
+    <string name="pref_title_social_recommendations">Habilitar recomendaciones sociales</string>
+    <string name="pref_description_social_recommendations">Recomendaciones para las personas a las que contactar en función de su historial de mensajes</string>
+
+    <string name="set_notifications_summary"> Este ajuste controla si o no recibirá notificaciones de Tafe.</string>
+
+    <string name="pref_title_display_name">Introduzca su nombre aquí</string>
+    <string name="pref_default_display_name">Usuario Tim</string>
+
+    <string name="pref_title_add_friends_to_messages">Añadir amigos a los mensajes</string>
+    <string-array name="pref_example_list_titles">
+        <item>Siempre</item>
+        <item>Cuando sea posible</item>
+        <item>Nunca</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Establecer datos&amp; sincronizar</string>
+
+    <string name="pref_title_sync_frequency">Frecuencia de sincronización</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>3 horas</item>
+        <item>6 horas</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">Configuración de sincronización del sistema</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notificaciones</string>
+
+    <string name="pref_title_new_message_notifications">Recibir notificaciones de Tafe</string>
+
+    <string name="pref_title_ringtone">Set tono</string>
+    <string name="set_notification_ringtone">Establecer el tono de llamada para las notificaciones.</string>
+    <string name="pref_ringtone_silent">Silencio</string>
+
+    <string name="pref_title_vibrate">Vibrar</string>
+    <string name="user_settings">Ajustes de usuario</string>
+    <string name="pref_map_settings">Configuración del mapa</string>
+    <string name="pref_notification_settings">Configuración de las notificaciones</string>
+
+    <string name="pref_rss_feed">Configuración de RSS Feed</string>
+    <string name="rss_feed_settings">Control RSS Feed Mostrar</string>
+    <string name="rss_feed_summary">Puede controlar si el feed RSS se muestra en la página principal aquí.</string>
+    <string name="data_summary">Establece la frecuencia con la que el Tafe Buddy utiliza datos.</string>
+    <string name="pref_title_data_sync">Configuración de datos y opciones de sincronización></string>
+
+
+</resources>
