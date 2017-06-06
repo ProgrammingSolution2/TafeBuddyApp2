@@ -118,5 +118,6 @@
     <string name="rss_feed_summary">You can control if the RSS feed is displayed on the main page here.</string>
     <string name="data_summary">Set how often the Tafe Buddy uses data.</string>
     <string name="pref_title_data_sync">Set Data and Sync options></string>
+    <string name="title_activity_campus_maps">Map</string>
 
 </resources>
