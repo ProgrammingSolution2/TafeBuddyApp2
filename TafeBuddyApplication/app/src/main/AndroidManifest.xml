@@ -118,7 +118,8 @@
         </activity>
         <activity
             android:name=".CampusMapsActivity"
-            android:label="@string/title_activity_campus_maps"></activity>
+            android:label="@string/title_activity_campus_maps"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
