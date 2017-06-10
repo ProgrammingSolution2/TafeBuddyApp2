@@ -113,6 +113,7 @@ public class ReadRSS extends AsyncTask<Void,Void,Void> {
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
             Document xmlDoc = builder.parse(inputStream);
+
             return xmlDoc;
         } catch (Exception e) {
             e.printStackTrace();

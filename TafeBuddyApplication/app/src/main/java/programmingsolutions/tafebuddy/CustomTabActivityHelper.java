@@ -31,23 +31,6 @@ class CustomTabActivityHelper implements ServiceConnectionCallback {
     private CustomTabsServiceConnection mConnection;
     private ConnectionCallback mConnectionCallback;
 
-    //urls to load
-    static final String COURSE_SCHEDULE = "https://my.tafesa.edu.au/PROD/bwskfshd.P_CrseSchd";
-    static final String COUNSELLING_BOOKING = "http://itstudies.simplybook.me/sheduler/manage";
-    static final String FAQ = "http://www.tafesa.edu.au/mytafe-sa/help";
-    static final String CALENDER = "https://outlook.office.com/owa/?realm=student.tafesa.edu.au&exsvurl=1&ll-cc=1033&modurl=1&path=/calendar/view/Month";
-    static final String VIDEO = "https://tafesaedu.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=h";
-    static final String ONEDRIVE = "https://tafesaedu-my.sharepoint.com/personal/timothy_finn_student_tafesa_edu_au/Documents/Forms/All.aspx";
-    static final String ONENOTE = "https://www.onenote.com/notebooks?session=f3dc3e95-ea68-4957-b69f-b028f7593d2e&auth=2";
-    static final String ACCOUNT = "https://my.tafesa.edu.au/PROD/bwsksphs.P_ViewStatement";
-    static final String USERDETAILS = "https://my.tafesa.edu.au/PROD/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu#pageName=bmenu--P_GenMnu___UID1&pageReferrerId=&pageDepth=2&options=false";
-    static final String EMAIL = "https://outlook.office.com";
-    static final String ACCOUNT_MAIN_PAGE = "https://my.tafesa.edu.au/PROD/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu#pageName=bmenu--P_StuMainMnu___UID0&pageReferrerId=&pageDepth=2&options=false";
-    static final String FILES = "http://netstorage.tafesa.edu.au/SitePages/Home.aspx";
-    static final String COURSE_INFORMATION = "http://www.tafesa.edu.au/courses";
-    static final String MOODLE = "http://learn.tafesa.edu.au/course/view.php?id=3129";
-
-
 
     //opens the URL on a Custom Tab if possible ortherwise it will fall back to opening it on a WebView.
 
@@ -63,19 +46,14 @@ class CustomTabActivityHelper implements ServiceConnectionCallback {
 
         //if we cant find a package name it means that theres no browser that supports
         //Chrome Custom Tabs installed. So we fallback to using a webview.
-
-        if(packageName == null){
-            if(fallBack != null){
-                fallBack.openURI(activity,uri);
-            }
+        if(URLS.isFormattable(uri.toString())&&packageName != null&&fallBack != null){
+            fallBack.openURI(activity,uri);
         }
         //otherwise it will open in a custom tab
         else {
             customTabsIntent.intent.setPackage(packageName);
             customTabsIntent.launchUrl(activity,uri);
         }
-
-
     }
 
 
@@ -143,20 +121,20 @@ class CustomTabActivityHelper implements ServiceConnectionCallback {
        //getting the urls ready in a bundle so they can passed to maylaunch method
         Bundle campusBundle = new Bundle();
 
-        campusBundle.putString("CourseScehdule", COURSE_SCHEDULE);
-        campusBundle.putString("FAQ", FAQ);
-        campusBundle.putString("Counselling", COUNSELLING_BOOKING);
-        campusBundle.putString("Calender", CALENDER);
-        campusBundle.putString("Video", VIDEO);
-        campusBundle.putString("OneDrive", ONEDRIVE);
-        campusBundle.putString("OneNote", ONENOTE);
-        campusBundle.putString("Account", ACCOUNT);
-        campusBundle.putString("UserDetails", USERDETAILS);
-        campusBundle.putString("Email", EMAIL);
-        campusBundle.putString("Account Mainpage", ACCOUNT_MAIN_PAGE);
-        campusBundle.putString("Files", FILES);
-        campusBundle.putString("Moodle", MOODLE);
-        campusBundle.putString("courseInformation", COURSE_INFORMATION);
+        campusBundle.putString("CourseScehdule", URLS.COURSE_SCHEDULE);
+        campusBundle.putString("FAQ", URLS.FAQ);
+        campusBundle.putString("Counselling", URLS.COUNSELLING_BOOKING);
+        campusBundle.putString("Calender", URLS.CALENDER);
+        campusBundle.putString("Video", URLS.VIDEO);
+        campusBundle.putString("OneDrive", URLS.ONEDRIVE);
+        campusBundle.putString("OneNote", URLS.ONENOTE);
+        campusBundle.putString("Account", URLS.ACCOUNT);
+        campusBundle.putString("UserDetails", URLS.USERDETAILS);
+        campusBundle.putString("Email", URLS.EMAIL);
+        campusBundle.putString("Account Mainpage", URLS.ACCOUNT_MAIN_PAGE);
+        campusBundle.putString("Files", URLS.FILES);
+        campusBundle.putString("Moodle", URLS.MOODLE);
+        campusBundle.putString("courseInformation", URLS.COURSE_INFORMATION);
 
 
 

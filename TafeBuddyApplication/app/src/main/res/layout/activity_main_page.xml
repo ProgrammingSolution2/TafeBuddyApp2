@@ -63,16 +63,18 @@
         android:layout_marginTop="2dp"
         android:layout_toStartOf="@+id/btnMyAccount"
         android:layout_above="@+id/btnCampuses">
+
         <ImageView
             android:id="@+id/imageAgenda"
             android:contentDescription="@string/btn_timetable"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/icon_background"
-            android:src="@drawable/ic_book"
+            android:src="@mipmap/ic_timetable"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -108,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/icon_background"
-            android:src="@drawable/ic_account_box"
+            android:src="@mipmap/ic_account"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
             />
@@ -149,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/icon_background"
-            android:src="@drawable/ic_faq"
+            android:src="@mipmap/ic_faq"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
             />
@@ -188,7 +190,7 @@
             android:contentDescription="@string/btn_campus_map"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:src="@drawable/ic_map"
+            android:src="@mipmap/ic_maps"
             android:background="@drawable/icon_background"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
@@ -228,7 +230,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/icon_background"
-            android:src="@drawable/ic_email"
+            android:src="@mipmap/ic_email"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
             />
@@ -266,7 +268,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/icon_background"
-            android:src="@drawable/ic_alarm_add"
+            android:src="@mipmap/ic_counselling"
             android:scaleType="fitCenter"
             android:clipToPadding="false"
             />
