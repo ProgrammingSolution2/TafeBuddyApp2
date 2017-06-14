@@ -66,6 +66,8 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
         super.onStart();
         //Disable preview Button
         preview.setEnabled(false);
+        preview.setTextColor(Color.BLACK);
+
         barcodeInfo.setText("");
         barcodeDetector = new BarcodeDetector.Builder(this)
                 .setBarcodeFormats(Barcode.QR_CODE)
@@ -80,21 +82,23 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
         cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-                try {
+
                     if (ContextCompat.checkSelfPermission(RoomScannerActivity.this,
                             Manifest.permission.CAMERA)
                             == PackageManager.PERMISSION_GRANTED)
                     {
-                        cameraSource.start(cameraView.getHolder());
+                        try {
+                            cameraSource.start(cameraView.getHolder());
+                        }catch (IOException ie) {
+                            Log.e("CAMERA SOURCE", ie.getMessage());
+                        }
                     }else{
                         ActivityCompat.requestPermissions(RoomScannerActivity.this,
                                 new String[]{Manifest.permission.CAMERA},
                                 MY_PERMISSIONS_REQUEST_CAMERA);
 
                     }
-                } catch (IOException ie) {
-                    Log.e("CAMERA SOURCE", ie.getMessage());
-                }
+
             }
 
             @Override
@@ -123,6 +127,7 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
                             @Override
                             public void run() {
                                 preview.setEnabled(true);
+                                preview.setTextColor(Color.WHITE);
                             }
                         });
                         preview.setOnClickListener(new View.OnClickListener() {

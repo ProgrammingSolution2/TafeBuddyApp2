@@ -32,7 +32,7 @@
     <string name="lbl_tools"> Tools </string>
     <string name="TAFELogo">TAFE Logo</string>
     <string name="btn_scan">Scan Room</string>
-    <string name="btn_preview">Done</string>
+    <string name="btn_preview">Open</string>
 
 
     <!-- Strings related to Settings -->
