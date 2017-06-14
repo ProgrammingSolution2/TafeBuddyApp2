@@ -106,9 +106,10 @@
         <activity
             android:name=".RoomScannerActivity"
             android:label="Scan Room QR"
+
             android:parentActivityName=".MainPage"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
