@@ -9,8 +9,9 @@
     -->
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="true"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -47,7 +48,7 @@
             android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
-            android:value="barcode"/>
+            android:value="barcode" />
 
         <activity
             android:name=".CampusListActivity"
@@ -101,20 +102,25 @@
         <activity
             android:name=".FirstRunActivity"
             android:label="@string/title_first_run"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RoomScannerActivity"
             android:label="Scan Room QR"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"
-            android:parentActivityName="programmingsolutions.tafebuddy.MainPage"
-            >
+
+            android:parentActivityName=".MainPage"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="programmingsolutions.tafebuddy.MainPage" />>
+                android:value="programmingsolutions.tafebuddy.MainPage" />
+            >
         </activity>
+        <activity
+            android:name=".CampusMapsActivity"
+            android:label="@string/title_activity_campus_maps"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
