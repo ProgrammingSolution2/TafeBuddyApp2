@@ -29,6 +29,7 @@ import java.io.IOException;
 import custom_tabs.CustomTabsHelper;
 
 public class RoomScannerActivity extends AppCompatActivity implements CustomTabActivityHelper.ConnectionCallback {
+
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 0;
     //setting up the custom tab helper class
     private CustomTabActivityHelper customTabActivityHelper;
