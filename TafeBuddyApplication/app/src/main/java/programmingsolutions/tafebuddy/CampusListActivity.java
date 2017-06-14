@@ -130,10 +130,14 @@ public class CampusListActivity extends AppCompatActivity {
                                 .commit();
                     } else {
                         Context context = v.getContext();
-                        Intent intent = new Intent(context, CampusDetailActivity.class);
-                        intent.putExtra(CampusDetailFragment.ARG_ITEM_ID, holder.mItem.id);
+                        Intent intent = new Intent(context, CampusMapsActivity.class);
+                        //intent.putExtra(CampusDetailFragment.ARG_ITEM_ID, holder.mItem.id);
+                        intent.putExtra("CampusName", holder.mItem.campusName);
+                        intent.putExtra("CampusLat", holder.mItem.campusLat);
+                        intent.putExtra("CampusLng", holder.mItem.campusLng);
 
                         context.startActivity(intent);
+
                     }
                 }
             });
