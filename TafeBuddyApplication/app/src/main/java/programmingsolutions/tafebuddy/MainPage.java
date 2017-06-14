@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -49,18 +50,6 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
     SharedPreferences sharedPreferences;
 
 
-    //Urls
-    static final String COURSE_SCHEDULE = "https://my.tafesa.edu.au/PROD/bwskfshd.P_CrseSchd";
-    static final String COUNSELLING_BOOKING = "http://itstudies.simplybook.me/index/about";
-    static final String FAQ = "http://www.tafesa.edu.au/mytafe-sa/help";
-    static final String VIDEO = "https://tafesaedu.sharepoint.com/portals/hub/_layouts/15/PointPublishing.aspx?app=video&p=h";
-    static final String ONENOTE = "https://www.onenote.com/notebooks?session=f3dc3e95-ea68-4957-b69f-b028f7593d2e&auth=2";
-    static final String ONEDRIVE = "https://tafesaedu-my.sharepoint.com/personal/timothy_finn_student_tafesa_edu_au/Documents/Forms/All.aspx";
-    static final String ACCOUNT = "https://my.tafesa.edu.au/PROD/bwsksphs.P_ViewStatement";
-    static final String USERDETAILS = "https://my.tafesa.edu.au/PROD/twbkwbis.P_GenMenu?name=bmenu.P_MainMnu#pageName=bmenu--P_GenMnu___UID1&pageReferrerId=&pageDepth=2&options=false";
-    static final String EMAIL = "https://outlook.office.com/owa/?realm=student.tafesa.edu.au&exsvurl=1&delegatedOrg=tafesaedu.onmicrosoft.com&ll-cc=1033&modurl=0";
-    static final String COURSE_INFORMATION = "http://www.tafesa.edu.au/courses";
-    static final String MOODLE = "http://learn.tafesa.edu.au/course/view.php?id=3129";
 
 
     //prefrences Strings
@@ -153,7 +142,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
                 Toast.makeText(MainPage.this, "Agenda Clicked", Toast.LENGTH_SHORT).show();
 
                 //parseing the string into a uri
-                Uri uri = Uri.parse(COURSE_SCHEDULE);
+                Uri uri = Uri.parse(URLS.COURSE_SCHEDULE);
                 openCustomTab(uri);
 
                 //testing how firebase analytics works have to wait 24 hours to view it on
@@ -167,7 +156,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainPage.this, "BookCounselling Clicked", Toast.LENGTH_SHORT).show();
-                Uri uri = Uri.parse(COUNSELLING_BOOKING);
+                Uri uri = Uri.parse(URLS.COUNSELLING_BOOKING);
                 openCustomTab(uri);
 
             }
@@ -177,7 +166,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainPage.this, "FAQPage Clicked", Toast.LENGTH_SHORT).show();
-                Uri uri = Uri.parse(FAQ);
+                Uri uri = Uri.parse(URLS.FAQ);
                 openCustomTab(uri);
             }
         });
@@ -186,7 +175,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainPage.this, "Account Clicked", Toast.LENGTH_SHORT).show();
-                Uri uri = Uri.parse(ACCOUNT);
+                Uri uri = Uri.parse(URLS.ACCOUNT);
                 openCustomTab(uri);
             }
         });
@@ -195,7 +184,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainPage.this, "Email Clicked", Toast.LENGTH_SHORT).show();
-                Uri uri = Uri.parse(EMAIL);
+                Uri uri = Uri.parse(URLS.EMAIL);
                 openCustomTab(uri);
 
             }
@@ -233,22 +222,22 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
         int id = item.getItemId();
 
         if (id == R.id.nav_courses) {
-            Uri uri = Uri.parse(COURSE_INFORMATION);
+            Uri uri = Uri.parse(URLS.COURSE_INFORMATION);
             openCustomTab(uri);
         } else if (id == R.id.nav_videos) {
-            Uri uri = Uri.parse(VIDEO);
+            Uri uri = Uri.parse(URLS.VIDEO);
             openCustomTab(uri);
         } else if (id == R.id.nav_onenote) {
-            Uri uri = Uri.parse(ONENOTE);
+            Uri uri = Uri.parse(URLS.ONENOTE);
             openCustomTab(uri);
         } else if (id == R.id.nav_onedrive) {
-            Uri uri = Uri.parse(ONEDRIVE);
+            Uri uri = Uri.parse(URLS.ONEDRIVE);
             openCustomTab(uri);
         } else if (id == R.id.nav_tasks) {
-            Uri uri = Uri.parse(USERDETAILS);
+            Uri uri = Uri.parse(URLS.USERDETAILS);
             openCustomTab(uri);
         } else if (id == R.id.nav_moodle) {
-            Uri uri = Uri.parse(MOODLE);
+            Uri uri = Uri.parse(URLS.MOODLE);
             openCustomTab(uri);
         } else if (id == R.id.nav_settings){
             Intent settingsIntent = new Intent(MainPage.this, SettingsActivity.class);
@@ -273,7 +262,11 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
         final CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder(customTabActivityHelper.getSession());
 
         //setting the toolbar color also allowing the tab to show the title of the wabpage.
-        builder.setToolbarColor(Color.RED).setShowTitle(true);
+        builder.setToolbarColor(
+                getResources().getColor(
+                    R.color.colorPrimary
+                )
+                ).setShowTitle(true);
 
         //this will change the custom animations for custom tab using animatinos resource files.
         builder.setStartAnimations(MainPage.this, R.anim.slide_in_right, R.anim.slide_out_left);
@@ -286,12 +279,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener,
         //this will hide the URL bar when a user scrolls down the page.
         builder.enableUrlBarHiding();
 
-        //this adds to the menu android default share.
-        builder.addDefaultShareMenuItem();
-
         //this should add actions to the custom tab pages
         prepareActionButton(builder);
-
 
 
         //this will check to see what browser is availible to handle custom tab.

@@ -33,6 +33,7 @@
         </list>
       </value>
     </option>
+
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -55,6 +56,7 @@
         </selected-state>
       </profile-state>
     </entry>
+
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -72,6 +74,8 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">

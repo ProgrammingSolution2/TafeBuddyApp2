@@ -6,25 +6,25 @@
         android:layout_height="wrap_content">
         <item
             android:id="@+id/nav_courses"
-            android:icon="@drawable/ic_account_box"
+            android:icon="@mipmap/ic_account"
             android:title="@string/btn_course_information"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></item>
         <item
             android:id="@+id/nav_videos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/ic_video"
             android:title="@string/btn_videos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <item
             android:id="@+id/nav_onenote"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/ic_onenote"
             android:title="@string/btn_one_note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <item
             android:id="@+id/nav_onedrive"
-            android:icon="@drawable/ic_cast_dark"
+            android:icon="@mipmap/ic_onedrive"
             android:title="@string/btn_one_drive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content" />
         <item
             android:id="@+id/nav_moodle"
-            android:icon="@drawable/ic_info_black_24dp"
+            android:icon="@mipmap/ic_moodle"
             android:title="@string/btn_moodle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
