@@ -18,6 +18,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
@@ -45,12 +46,6 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_scanner);
         preview = (Button) findViewById(R.id.scan_button);
-
-        /*ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }*/
-
         customTabActivityHelper = new CustomTabActivityHelper();
         //lets the helper know that we want this class to be used.
         customTabActivityHelper.setConnectionCallback(this);
@@ -58,12 +53,6 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
 
         cameraView = (SurfaceView)findViewById(R.id.camera_view);
         barcodeInfo = (TextView)findViewById(R.id.txt_scan_content);
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
         //Disable preview Button
         preview.setEnabled(false);
         preview.setTextColor(Color.BLACK);
@@ -83,21 +72,21 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
 
-                    if (ContextCompat.checkSelfPermission(RoomScannerActivity.this,
-                            Manifest.permission.CAMERA)
-                            == PackageManager.PERMISSION_GRANTED)
-                    {
-                        try {
-                            cameraSource.start(cameraView.getHolder());
-                        }catch (IOException ie) {
-                            Log.e("CAMERA SOURCE", ie.getMessage());
-                        }
-                    }else{
-                        ActivityCompat.requestPermissions(RoomScannerActivity.this,
-                                new String[]{Manifest.permission.CAMERA},
-                                MY_PERMISSIONS_REQUEST_CAMERA);
-
+                if (ContextCompat.checkSelfPermission(RoomScannerActivity.this,
+                        Manifest.permission.CAMERA)
+                        == PackageManager.PERMISSION_GRANTED)
+                {
+                    try {
+                        cameraSource.start(cameraView.getHolder());
+                    }catch (IOException ie) {
+                        Log.e("CAMERA SOURCE", ie.getMessage());
                     }
+                }else{
+                    ActivityCompat.requestPermissions(RoomScannerActivity.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            MY_PERMISSIONS_REQUEST_CAMERA);
+
+                }
 
             }
 
@@ -148,6 +137,7 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
                 }
             }
         });
+
     }
 
     @Override
@@ -171,8 +161,8 @@ public class RoomScannerActivity extends AppCompatActivity implements CustomTabA
 
                 } else {
 
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+                    Toast.makeText(RoomScannerActivity.this, "Permission Denied", Toast.LENGTH_LONG).show();
+                    cameraSource.stop();
                 }
                 return;
             }
